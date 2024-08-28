@@ -1,0 +1,24 @@
+body{
+    background-image: url(../img/Wave-100s-1366px\ \(2\).svg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+.mainColor{
+    color: #653383;
+}
+.mainbg{
+    background-color: #653383;
+}
+.quiz span {
+    cursor: auto;
+}
+.quiz,.finish,.alert,#Correct,#inCorrect{
+    display: none ;
+}
+
+@media screen and (max-width:1000px){
+ .w-50{
+    width: 70% !important;
+ }    
+}

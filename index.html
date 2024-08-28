@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- main file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="favicon.ico" type="favicon.ico">
+    <!-- siteName  -->
+    <title>Quiz</title>
+  </head>
+  <body class="py-5">
+
+    <section class="setting mt-4">
+      <div class="bg-white w-50 m-auto rounded shadow py-5">
+        <h1 class="text-center mainColor border-bottom pb-5">Setting Your Quiz</h1>
+        <div class="p-4">
+          <div class="categoryForm">
+            <label for="category" class="mb-2 fw-bold">Category :</label>
+            <select id="category" class="form-control" name="category">
+              <option value="9">General Knowledge</option>
+              <option value="27">Animals</option>
+              <option value="15">Video Games</option>
+              <option value="23">History</option>
+              <option value="21">Sports</option>
+              <option value="18">Science: Computers</option>
+            </select>
+          </div>
+          <div class="difficultyForm my-4">
+            <p class="mb-2 fw-bold">Difficulty :</p>
+            <div class="form-check">
+              <label for="easy" class="form-check-label">
+                <input type="radio" name="difficulty" id="easy" value="easy" checked/>Easy
+              </label>
+            </div>
+            <div class="form-check">
+              <label for="medium" class="form-check-label">
+                <input type="radio" name="difficulty" id="medium" value="medium"/> Medium
+              </label>
+            </div>
+            <div class="form-check">
+              <label for="hard" class="form-check-label">
+                <input type="radio" name="difficulty" id="hard" value="hard" /> Hard
+              </label>
+            </div>
+          </div>
+          <div class="numForm">
+            <input type="number" class="form-control" id="number" placeholder="Number Of questions" required/>
+          </div>
+          <div class="alert alert-danger mt-3">Please Choose Number Of Questions</div>
+          <button id="startBtn" class="mainbg rounded-pill text-white py-2 px-5 mt-4 float-end">Start</button>
+          <div class="clearfix"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz mt-4">
+      <div class="bg-white w-50 m-auto rounded shadow py-5">
+        <h1 class="text-center mainColor ">Quiz</h1>
+        <div class="p-4 border-top">
+          <span class="mainbg rounded-pill text-white p-2 float-end"> 
+            <span id="currentquest">1</span> Of <span id="totalquest">2</span> Question
+          </span>
+          <span id="inCorrect" class="btn btn-danger">In Correct</span>
+          <span id="Correct" class="btn btn-success">Correct</span>
+        </div>
+        <div class="questionForm p-4 ">
+          <div class="mb-2">
+            <h5 class="d-inline mainColor">Q:</h5>
+            <h5 id="question" class="d-inline mb-4 mainColor"></h5><br>
+          </div>
+          <div id="rowAnswer">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" name="answer" id="q1" value="value" />
+              </label>
+            </div>
+          </div>
+          <div class="alert alert-danger mt-3">Please Choose Your Answer</div>
+          <button class="mainbg rounded-pill text-white py-2 px-5 mt-4 float-end" id="next">Submit</button>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="finish mt-4">
+      <div class="bg-white w-50 m-auto rounded shadow py-5">
+        <h1 class="text-center mainColor border-bottom pb-5">fininsh</h1>
+        <div class="p-4">
+          <h2 class="text-center mainColor">score</h2>
+          <h2 class="text-center mainColor" id="score"></h2>
+          <button class="mainbg rounded-pill text-white py-2 px-4 mt-4 float-end" id="tryBtn">Try Again?</button>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- bootstrap  -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jquery -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- main -->
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>
